@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Movie Booking</string>
+    <string name="account">Don\'t have an account yet? <font color="#1e88e5"><b><u><i>Sign Up</i></u></b></font></string>
+    <string name="forgot_password"><font color="#1e88e5"><u><b><i>Forgot password?</i></b></u></font></string>
+    <string name="already_account"><font color="#1e88e5"><u><b><i>Already have account?</i></b></u></font></string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
