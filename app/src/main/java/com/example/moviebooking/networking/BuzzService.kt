@@ -18,7 +18,7 @@ private lateinit var okHttpClient: OkHttpClient
 
 interface BuzzInterface {
     @GET("top-headlines?language=en&apikey=$API_KEY")
-    fun getGetHeadlines(@Query("category") category: String, @Query("page") page: Int) : Call<Buzz>
+    fun getGetHeadlines(@Query("category") category: String, @Query("page") page: Int): Call<Buzz>
 }
 
 object BuzzService {
@@ -36,13 +36,15 @@ object BuzzService {
 
 private fun hasNetwork(context: Context): Boolean? {
     var isConnected: Boolean? = false // Initial Value
-    val connectivityManager = context.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
+    val connectivityManager =
+        context.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
     val activeNetwork: NetworkInfo? = connectivityManager.activeNetworkInfo
     if (activeNetwork != null && activeNetwork.isConnected)
         isConnected = true
     return isConnected
 }
-fun cache(context:Context){
+
+fun cache(context: Context) {
     val cacheSize = (5 * 1024 * 1024).toLong()
     val myCache = Cache(context.cacheDir, cacheSize)
     okHttpClient = OkHttpClient.Builder()
@@ -52,7 +54,10 @@ fun cache(context:Context){
             request = if (hasNetwork(context)!!)
                 request.newBuilder().header("Cache-Control", "public, max-age=" + 5).build()
             else
-                request.newBuilder().header("Cache-Control", "public, only-if-cached, max-stale=" + 60 * 60 * 24 * 7).build()
+                request.newBuilder().header(
+                    "Cache-Control",
+                    "public, only-if-cached, max-stale=" + 60 * 60 * 24 * 7
+                ).build()
             chain.proceed(request)
         }
         .build()

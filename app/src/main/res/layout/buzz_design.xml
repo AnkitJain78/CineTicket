@@ -4,39 +4,39 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="200dp"
     android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:layout_margin="6dp">
+    android:layout_margin="6dp"
+    android:orientation="vertical">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/buzzCardView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/cardBackground"
         app:cardCornerRadius="12dp"
-        app:cardElevation="10dp"
-        app:cardBackgroundColor="@color/cardBackground">
+        app:cardElevation="10dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:background = "@drawable/background_buzz_design">
+            android:background="@drawable/background_buzz_design"
+            android:orientation="vertical">
 
-        <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/buzzImage"
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:scaleType="centerCrop" />
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/buzzImage"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop" />
 
-        <TextView
-            android:id="@+id/buzzTitle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="4dp"
-            android:ellipsize="end"
-            android:maxLines="3"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:fontFamily="@font/poppins_medium"/>
+            <TextView
+                android:id="@+id/buzzTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/poppins_medium"
+                android:maxLines="3"
+                android:textSize="18sp"
+                android:textStyle="bold" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 </LinearLayout>

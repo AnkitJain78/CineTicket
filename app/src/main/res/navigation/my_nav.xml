@@ -22,7 +22,17 @@
         tools:layout="@layout/fragment_profile" />
     <fragment
         android:id="@+id/orderFragment"
-        android:name="com.example.moviebooking.OrderFragment"
+        android:name="com.example.moviebooking.uiFragments.OrderFragment"
         android:label="fragment_order"
         tools:layout="@layout/fragment_order" />
+    <dialog
+        android:id="@+id/bottomSheetFragment"
+        android:name="com.example.moviebooking.uiFragments.BottomSheetFragment"
+        android:label="fragment_bottom_sheet"
+        tools:layout="@layout/fragment_bottom_sheet" />
+    <dialog
+        android:id="@+id/bottomSheetPhoneFragment"
+        android:name="com.example.moviebooking.uiFragments.BottomSheetPhoneFragment"
+        android:label="fragment_bottom_sheet_phone"
+        tools:layout="@layout/fragment_bottom_sheet_phone" />
 </navigation>

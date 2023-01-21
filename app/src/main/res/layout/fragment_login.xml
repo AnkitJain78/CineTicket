@@ -80,10 +80,10 @@
             android:layout_height="45dp"
             android:layout_marginTop="10dp"
             android:text="Sign In"
+            android:textAllCaps="false"
             android:textColor="@color/black"
             android:textSize="18sp"
-            app:backgroundTint="#FFFFFF"
-            android:textAllCaps="false"/>
+            app:backgroundTint="#FFFFFF" />
 
         <LinearLayout
             android:layout_width="match_parent"

@@ -3,21 +3,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".uiFragments.BuzzFragment"
-    android:layout_marginTop="58dp">
+    android:layout_marginTop="58dp"
+    tools:context=".uiFragments.BuzzFragment">
 
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:layout_marginStart="5dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:orientation="vertical">
 
         <TextView
             android:id="@+id/comedyBuzz"
-            android:layout_marginTop="5dp"
-            android:layout_marginStart="10dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
             android:fontFamily="@font/poppins_bold"
             android:text="Top Headlines"
             android:textColor="@color/black"
@@ -28,13 +28,13 @@
             android:id="@+id/recyclerView1"
             android:layout_width="match_parent"
             android:layout_height="300dp"
-            tools:listitem="@layout/buzz_design"/>
+            tools:listitem="@layout/buzz_design" />
 
         <TextView
             android:id="@+id/technologyBuzz"
-            android:layout_marginStart="10dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
             android:fontFamily="@font/poppins_bold"
             android:text="Entertainment"
             android:textColor="@color/black"
@@ -45,42 +45,40 @@
             android:id="@+id/recyclerView2"
             android:layout_width="match_parent"
             android:layout_height="300dp"
-            tools:listitem="@layout/buzz_design"/>
+            tools:listitem="@layout/buzz_design" />
 
         <TextView
             android:id="@+id/storiesBuzz"
-            android:layout_marginStart="10dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
             android:fontFamily="@font/poppins_bold"
             android:text="Technology"
             android:textColor="@color/black"
             android:textSize="28sp"
-            android:textStyle="bold"
-            />
+            android:textStyle="bold" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerView3"
             android:layout_width="match_parent"
             android:layout_height="300dp"
-            tools:listitem="@layout/buzz_design"/>
+            tools:listitem="@layout/buzz_design" />
 
         <TextView
             android:id="@+id/sportsBuzz"
-            android:layout_marginStart="10dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
             android:fontFamily="@font/poppins_bold"
             android:text="Sports"
             android:textColor="@color/black"
             android:textSize="28sp"
-            android:textStyle="bold"
-            />
+            android:textStyle="bold" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerView4"
             android:layout_width="match_parent"
             android:layout_height="300dp"
-            tools:listitem="@layout/buzz_design"/>
+            tools:listitem="@layout/buzz_design" />
     </LinearLayout>
 </ScrollView>

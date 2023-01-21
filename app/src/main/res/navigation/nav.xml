@@ -9,7 +9,7 @@
         android:id="@+id/loginFragment"
         android:name="com.example.moviebooking.authenticationScreens.LoginFragment"
         android:label="fragment_login"
-        tools:layout="@layout/fragment_login" >
+        tools:layout="@layout/fragment_login">
         <action
             android:id="@+id/action_loginFragment_to_signUpFragment"
             app:destination="@id/signUpFragment" />
@@ -21,7 +21,7 @@
         android:id="@+id/signUpFragment"
         android:name="com.example.moviebooking.authenticationScreens.SignUpFragment"
         android:label="fragment_sign_up"
-        tools:layout="@layout/fragment_sign_up" >
+        tools:layout="@layout/fragment_sign_up">
         <action
             android:id="@+id/action_signUpFragment_to_loginFragment"
             app:destination="@id/loginFragment" />
@@ -30,7 +30,7 @@
         android:id="@+id/forgotPassword"
         android:name="com.example.moviebooking.authenticationScreens.ForgotPassword"
         android:label="fragment_forgot_password"
-        tools:layout="@layout/fragment_forgot_password" >
+        tools:layout="@layout/fragment_forgot_password">
         <action
             android:id="@+id/action_forgotPassword_to_loginFragment"
             app:destination="@id/loginFragment" />

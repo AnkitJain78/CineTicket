@@ -5,39 +5,39 @@
 
     <group android:checkableBehavior="single">
 
-    <item
-        android:id="@+id/homeFragment"
-        android:title="Home"
-        android:icon="@drawable/ic_home"/>
+        <item
+            android:id="@+id/homeFragment"
+            android:icon="@drawable/ic_home"
+            android:title="Home" />
 
-    <item
-        android:id="@+id/profileFragment"
-        android:title="Profile"
-        android:icon="@drawable/ic_profile"/>
+        <item
+            android:id="@+id/profileFragment"
+            android:icon="@drawable/ic_profile"
+            android:title="Profile" />
 
-    <item
-        android:id="@+id/orderFragment"
-        android:title="Orders"
-        android:icon="@drawable/ic_order"/>
+        <item
+            android:id="@+id/orderFragment"
+            android:icon="@drawable/ic_order"
+            android:title="Orders" />
 
         <item
             android:id="@+id/buzzFragment"
             android:title="Buzz" />
 
-    <item
-        android:id="@+id/nav_changePassword"
-        android:title="Change Password"
-        android:icon="@drawable/ic_change_pwd"/>
+        <item
+            android:id="@+id/fragment_changePassword"
+            android:icon="@drawable/ic_change_pwd"
+            android:title="Change Password" />
 
-    <item
-        android:id="@+id/nav_theme"
-        android:title="Change theme"
-        android:icon="@drawable/ic_theme"/>
+        <item
+            android:id="@+id/theme"
+            android:icon="@drawable/ic_theme"
+            android:title="Change theme" />
 
-    <item
-        android:id="@+id/nav_logout"
-        android:title="Log out"
-        android:icon="@drawable/ic_logout" />
+        <item
+            android:id="@+id/logout"
+            android:icon="@drawable/ic_logout"
+            android:title="Log out" />
 
     </group>
 </menu>

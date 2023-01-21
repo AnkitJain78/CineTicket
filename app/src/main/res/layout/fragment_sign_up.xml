@@ -10,12 +10,12 @@
         android:id="@+id/imageSignUp"
         android:layout_width="match_parent"
         android:layout_height="230dp"
+        android:contentDescription="sign up"
         android:src="@drawable/sign_up"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:contentDescription="sign up" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
         android:layout_width="match_parent"

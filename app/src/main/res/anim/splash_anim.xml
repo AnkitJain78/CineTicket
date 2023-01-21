@@ -1,20 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <set xmlns:android="http://schemas.android.com/apk/res/android">
-        <rotate
-            android:fromDegrees="0"
-            android:toDegrees="360"
-            android:pivotY="50%"
-            android:pivotX="50%"
-            android:duration="2000">
-        </rotate>
+    <rotate
+        android:duration="2000"
+        android:fromDegrees="0"
+        android:pivotX="50%"
+        android:pivotY="50%"
+        android:toDegrees="360"></rotate>
 
-        <scale
-            android:fromXScale="0"
-            android:fromYScale="0"
-            android:toYScale="1"
-            android:toXScale="1"
-            android:pivotX="50%"
-            android:pivotY="50%"
-            android:duration="2000">
-        </scale>
+    <scale
+        android:duration="2000"
+        android:fromXScale="0"
+        android:fromYScale="0"
+        android:pivotX="50%"
+        android:pivotY="50%"
+        android:toXScale="1"
+        android:toYScale="1"></scale>
 </set>

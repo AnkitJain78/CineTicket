@@ -8,12 +8,12 @@ import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.moviebooking.networking.BuzzService
-import com.example.moviebooking.networking.model.Article
-import com.example.moviebooking.networking.model.Buzz
 import com.example.moviebooking.adapter.BuzzAdapter
 import com.example.moviebooking.databinding.FragmentBuzzBinding
+import com.example.moviebooking.networking.BuzzService
 import com.example.moviebooking.networking.cache
+import com.example.moviebooking.networking.model.Article
+import com.example.moviebooking.networking.model.Buzz
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -47,7 +47,8 @@ class BuzzFragment : Fragment() {
             LinearLayoutManager(activity?.applicationContext, LinearLayoutManager.HORIZONTAL, false)
         binding.recyclerView4.layoutManager =
             LinearLayoutManager(activity?.applicationContext, LinearLayoutManager.HORIZONTAL, false)
-        val adapter1 = activity?.let { BuzzAdapter(buzzList, it.applicationContext, binding.recyclerView1) }
+        val adapter1 =
+            activity?.let { BuzzAdapter(buzzList, it.applicationContext, binding.recyclerView1) }
         val adapter2 =
             activity?.let { BuzzAdapter(buzzList2, it.applicationContext, binding.recyclerView2) }
         val adapter3 =
@@ -60,13 +61,13 @@ class BuzzFragment : Fragment() {
         binding.recyclerView4.adapter = adapter4
         activity?.let { cache(it.applicationContext) }
         getBuzz("", 1, 1)
-        getBuzz("entertainment", 1,  2)
+        getBuzz("entertainment", 1, 2)
         getBuzz("technology", 1, 3)
         getBuzz("sports", 1, 4)
     }
 
     private fun getBuzz(category: String, page: Int, section: Int) {
-        val buzz = BuzzService.buzzInstance.getGetHeadlines(category,page)
+        val buzz = BuzzService.buzzInstance.getGetHeadlines(category, page)
         buzz.enqueue(object : Callback<Buzz> {
             override fun onResponse(call: Call<Buzz>, response: Response<Buzz>) {
                 when (section) {

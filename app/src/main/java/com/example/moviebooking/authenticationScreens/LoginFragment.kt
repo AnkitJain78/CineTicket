@@ -4,7 +4,6 @@ import android.app.Activity
 import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -13,6 +12,7 @@ import android.widget.Toast
 import androidx.activity.result.ActivityResultCallback
 import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.fragment.app.Fragment
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
 import com.example.moviebooking.HomeActivity
@@ -102,11 +102,13 @@ class LoginFragment : Fragment() {
                 val intent = Intent(activity, HomeActivity::class.java)
                 startActivity(intent)
                 activity?.finish()
-                Toast.makeText(activity?.applicationContext, "Welcome back !!", Toast.LENGTH_SHORT).show()
-            }
-            else{
-                Toast.makeText(activity?.applicationContext,
-                    task.exception?.localizedMessage?.toString(),Toast.LENGTH_SHORT).show()
+                Toast.makeText(activity?.applicationContext, "Welcome back !!", Toast.LENGTH_SHORT)
+                    .show()
+            } else {
+                Toast.makeText(
+                    activity?.applicationContext,
+                    task.exception?.localizedMessage?.toString(), Toast.LENGTH_SHORT
+                ).show()
             }
         }
     }
@@ -151,14 +153,15 @@ class LoginFragment : Fragment() {
             }
         }
     }
-    fun getEmail(): String{
-        return binding.editTextEmailLogin.editText?.text.toString().replace('.',',')
+
+    fun getEmail(): String {
+        return binding.editTextEmailLogin.editText?.text.toString().replace('.', ',')
     }
 
     override fun onStart() {
         super.onStart()
         val user = auth.currentUser
-        if (user!=null) {
+        if (user != null) {
             val intent = Intent(activity, HomeActivity::class.java)
             startActivity(intent)
             activity?.finish()

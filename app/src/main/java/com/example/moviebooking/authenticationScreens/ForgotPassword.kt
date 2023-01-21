@@ -1,11 +1,11 @@
 package com.example.moviebooking.authenticationScreens
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.fragment.app.Fragment
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
 import com.example.moviebooking.R
@@ -40,14 +40,21 @@ class ForgotPassword : Fragment() {
 
     private fun resetPassword(email: String) {
         auth.sendPasswordResetEmail(email).addOnCompleteListener { task ->
-            if (task.isSuccessful){
+            if (task.isSuccessful) {
                 binding.progressBarForgotPassword.visibility = View.INVISIBLE
                 binding.buttonResetPassword.isClickable = true
-                Toast.makeText(activity?.applicationContext, "password reset mail sent successfully", Toast.LENGTH_SHORT).show()
+                Toast.makeText(
+                    activity?.applicationContext,
+                    "password reset mail sent successfully",
+                    Toast.LENGTH_SHORT
+                ).show()
                 navController.navigate(R.id.action_forgotPassword_to_loginFragment)
-            }
-            else
-                Toast.makeText(activity?.applicationContext, task.exception?.localizedMessage, Toast.LENGTH_SHORT).show()
+            } else
+                Toast.makeText(
+                    activity?.applicationContext,
+                    task.exception?.localizedMessage,
+                    Toast.LENGTH_SHORT
+                ).show()
         }
     }
 }
